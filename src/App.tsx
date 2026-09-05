@@ -1,3 +1,4 @@
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
@@ -7,7 +8,18 @@ const App = () => {
     <body>
       <Header></Header>
       <main>
-        <section className="taskcard-container">
+        
+
+      </main>
+      <Footer></Footer>
+    </body>
+  );
+};
+
+export default App;
+
+
+/*         <section className="taskcard-container">
           <TaskCard
             priority="Hög"
             category="Frontend"
@@ -32,11 +44,4 @@ const App = () => {
             id={3}
             title="Skriv tester"
           ></TaskCard>
-        </section>
-      </main>
-      <Footer></Footer>
-    </body>
-  );
-};
-
-export default App;
+        </section> */
