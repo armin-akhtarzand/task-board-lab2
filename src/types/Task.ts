@@ -5,6 +5,7 @@ export type Task = {
     id: number;
     title: string;
     description: string;
+    category: string;
     assignee: string;
     priority: TaskPriority;
     status: TaskStatus;
