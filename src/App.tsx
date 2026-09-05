@@ -1,4 +1,4 @@
-
+import Column from "./components/Column";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
@@ -8,8 +8,38 @@ const App = () => {
     <body>
       <Header></Header>
       <main>
-        
-
+        <div className="taskcard-container">
+          <Column title="Todo">
+            <TaskCard
+              priority="Låg"
+              category="Design"
+              assignee="Adam"
+              description="Skapa global header för appen"
+              id={2}
+              title="Skapa header"
+            ></TaskCard>
+          </Column>
+          <Column title="Doing">
+            <TaskCard
+              priority="Medel"
+              category="Test"
+              assignee="Anna"
+              description="Skriv tester för formuläret till appen"
+              id={3}
+              title="Skriv tester"
+            ></TaskCard>
+          </Column>
+          <Column title="Done">
+            <TaskCard
+              priority="Hög"
+              category="Frontend"
+              assignee="Armin"
+              description="Bygg formuläret för kontakt sidan till appen"
+              id={1}
+              title="Bygga formulär"
+            ></TaskCard>
+          </Column>
+        </div>
       </main>
       <Footer></Footer>
     </body>
@@ -17,7 +47,6 @@ const App = () => {
 };
 
 export default App;
-
 
 /*         <section className="taskcard-container">
           <TaskCard

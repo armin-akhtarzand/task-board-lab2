@@ -1,12 +1,18 @@
-type ColumnProps = {
-    title: string;
-}
+import type {ReactNode} from "react";
 
-const Column = ({title}: ColumnProps) =>{
+type ColumnProps = {
+  title: string;
+  children: ReactNode;
+  
+};
+
+const Column = ({ title, children }: ColumnProps) => {
+  return (
     <section>
         <h1>{title}</h1>
+        {children}
     </section>
-
-}
+  );
+};
 
 export default Column;

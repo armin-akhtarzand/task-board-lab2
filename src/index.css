@@ -5,7 +5,14 @@ html {
 * {
   box-sizing: border-box;
 }
-
+body{
+  background-color: antiquewhite;
+}
+.header {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+}
 .taskcard-container {
   display: flex;
   justify-content: center;
@@ -23,12 +30,6 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   position: relative;
-}
-
-.header {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid black;
 }
 .priority {
   position: absolute;
