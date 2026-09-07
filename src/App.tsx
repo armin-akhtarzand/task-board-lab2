@@ -147,7 +147,7 @@ const App = () => {
         </div>
         <Column title="Formulär">
         <div>
-            {TaskForm()}
+            <TaskForm></TaskForm>
           </div>
         </Column>
       </main>

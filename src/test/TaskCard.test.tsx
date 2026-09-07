@@ -18,7 +18,7 @@ it("Visa alla värden i task card", () =>{
     expect(screen.getByText("test")).toBeInTheDocument();
     expect(screen.getByText("Test titel")).toBeInTheDocument();
     expect(screen.getByText("Test beskrivning")).toBeInTheDocument();
-    expect(screen.getByText("Ansvarig: Testaren")).toBeInTheDocument();
+    expect(screen.getByText("Tilldelad: Testaren")).toBeInTheDocument();
     expect(screen.getByText("Prioritet: Hög")).toBeInTheDocument();
 });
 });
