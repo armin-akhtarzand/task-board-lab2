@@ -15,7 +15,7 @@ const TaskCard = ({title, description, assignee, category, priority}: TaskCardPr
             <h2>{title}</h2>
             <p>{category}</p>
             <p>{description}</p>
-            <p>Ansvarig: {assignee}</p>
+            <p>Tilldelad: {assignee}</p>
             <p className="priority">Prioritet: {priority}</p>
         </article>
     )

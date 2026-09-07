@@ -5,7 +5,7 @@ html {
 * {
   box-sizing: border-box;
 }
-body{
+body {
   background-color: antiquewhite;
 }
 .header {
@@ -19,7 +19,7 @@ body{
   align-items: flex-start;
   gap: 2rem;
 }
-.column{
+.column {
   text-align: center;
 }
 .taskcard-container {
@@ -27,6 +27,7 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px 20px;
+  min-height: 850px;
   gap: 2rem;
 }
 .tasks {
@@ -48,4 +49,35 @@ body{
   font-weight: bold;
   border-radius: 5px;
   border: 3px solid black;
+}
+form {
+  background-color:  #fc8c50;
+  border: 2px solid lightgray;
+  padding: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-label {
+  justify-self: end;
+}
+
+form div {
+  display: grid;
+  grid-template-columns: 1fr 280px 1fr;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  grid-column: 2;
+  width: 100%;
+}
+form button {
+  padding: 10px 20px;
+  background-color: lightgray;
+  border: 1px solid black;
+  cursor: pointer;
 }

@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
 import type { Task } from "./types/Task";
+import TaskForm from "./components/TaskForm";
 
 const tasks: Task[] = [
   {
@@ -144,6 +145,11 @@ const App = () => {
           </div>
         </Column>
         </div>
+        <Column title="Formulär">
+        <div>
+            {TaskForm()}
+          </div>
+        </Column>
       </main>
       <Footer></Footer>
     </>
