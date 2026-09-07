@@ -1,10 +1,12 @@
+import type { TaskPriority } from "../types/Task";
+
 type TaskCardProp = {
     title: string;
     id: number;
     description: string;
     assignee: string;
     category: string;
-    priority: string;
+    priority: TaskPriority;
 }
 
 

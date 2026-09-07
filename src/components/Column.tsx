@@ -9,7 +9,7 @@ type ColumnProps = {
 const Column = ({ title, children }: ColumnProps) => {
   return (
     <section className="column">
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         {children}
     </section>
   );

@@ -5,7 +5,7 @@ const TaskForm = () => {
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
   const [category, setCategory] = useState("");
-  const [priority, setPriority] = useState("");
+  const [priority, setPriority] = useState("Låg");
   const handleSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -19,7 +19,7 @@ const TaskForm = () => {
 
   return (
     <>
-      <form action="POST" className="form" onSubmit={handleSubmit}>
+      <form method="POST" className="form" onSubmit={handleSubmit}>
         <div>
             <label htmlFor="title" className="form-label">Titel</label>
           <input
