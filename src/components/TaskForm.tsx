@@ -59,7 +59,7 @@ const TaskForm = () => {
           />
         </div>
         <div>
-            <label htmlFor="priority" className="form-label"></label>
+            <label htmlFor="priority" className="form-label">Prioritet</label>
           <select
             name="priority"
             id="priority"
