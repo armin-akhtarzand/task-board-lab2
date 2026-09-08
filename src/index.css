@@ -10,11 +10,7 @@ html {
 body {
   background-color: antiquewhite;
 }
-.header {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid black;
-}
+
 .board-container {
   display: flex;
   justify-content: center;
