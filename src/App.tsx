@@ -95,12 +95,12 @@ const App = () => {
   const done: Task[] = tasks.filter((task) => task.status === "done");
 
   return (
-    <>
+    <div className="min-h-screen bg-orange-50 text-gray-900">
       <Header></Header>
-      <main>
-        <div className="board-container">
+      <main className="space-y-12 py-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 lg:grid-cols-3">
         <Column title="Todo">
-          <div className="taskcard-container">
+          <div className="flex flex-wrap justify-center gap-8 px-5 py-2.5">
             {todo.map((task) => (
               <TaskCard
                 id={task.id}
@@ -115,7 +115,7 @@ const App = () => {
           </div>
         </Column>
         <Column title="Doing">
-          <div className="taskcard-container">
+          <div className="flex flex-wrap justify-center gap-8 px-5 py-2.5">
             {doing.map((task) => (
               <TaskCard
                 key={task.id}
@@ -130,7 +130,7 @@ const App = () => {
           </div>
         </Column>
         <Column title="Done">
-          <div className="taskcard-container">
+          <div className="flex flex-wrap justify-center gap-8 px-5 py-2.5">
             {done.map((task) => (
               <TaskCard
                 key={task.id}
@@ -146,13 +146,13 @@ const App = () => {
         </Column>
         </div>
         <Column title="Formulär">
-        <div>
+        <div className="px-4">
             <TaskForm></TaskForm>
           </div>
         </Column>
       </main>
       <Footer></Footer>
-    </>
+      </div>
   );
 };
 
