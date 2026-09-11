@@ -1,20 +1,25 @@
 import { useState } from "react";
+import type { NewTask, TaskPriority } from "../types/Task";
 
-const TaskForm = () => {
+type TaskFormProps = {
+  onAddTask:  (task: NewTask) => void;
+}
+
+const TaskForm = ({onAddTask}: TaskFormProps) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
   const [category, setCategory] = useState("");
-  const [priority, setPriority] = useState("Låg");
+  const [priority, setPriority] = useState<TaskPriority>("Låg");
   const handleSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log("Uppgift tillagd - ");
-    console.log("Prioritet: " + priority);
-    console.log("Titel: " + title);
-    console.log("Kategori: " + category);
-    console.log("Beskrivning: " + description);
-    console.log("Tilldelad: " + assignee);
+  onAddTask({title, description, assignee,category,priority});
+  setTitle("");
+  setDescription("");
+  setAssignee("");
+  setCategory("");
+    
   };
 
   return (
@@ -83,7 +88,7 @@ const TaskForm = () => {
             id="priority"
             value={priority}
             required
-            onChange={(event) => setPriority(event.target.value)}
+            onChange={(event) => setPriority(event.target.value as TaskPriority)}
           >
             <option value="Låg">Låg</option>
             <option value="Medel">Medel</option>
