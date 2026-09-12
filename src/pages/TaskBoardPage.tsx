@@ -1,14 +1,15 @@
 import TaskBoard from "../components/TaskBoard";
-import type { Task } from "../types/Task";
+import type { Task, TaskStatus } from "../types/Task";
 
 type TaskBoardPageProps = {
   tasks: Task[];
+  onStatusChange: (id: number, status: TaskStatus) => Promise<void>;
 };
 
-const TaskBoardPage = ({ tasks }: TaskBoardPageProps) => {
+const TaskBoardPage = ({ tasks, onStatusChange }: TaskBoardPageProps) => {
   return (
     <main className="space-y-12 py-8">
-      <TaskBoard tasks={tasks}></TaskBoard>
+      <TaskBoard onStatusChange={onStatusChange} tasks={tasks}></TaskBoard>
     </main>
   );
 };
