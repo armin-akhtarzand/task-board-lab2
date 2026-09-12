@@ -1,10 +1,10 @@
-import Column from "./components/Column";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import TaskBoard from "./components/TaskBoard";
+import CreateTaskPage from "./pages/CreateTaskPage";
+import TaskBoardPage from "./pages/TaskBoardPage";
 import type { NewTask, Task } from "./types/Task";
-import TaskForm from "./components/TaskForm";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router";
 
 const apiUrl = "http://localhost:3005/api/tasks";
 
@@ -52,14 +52,11 @@ const App = () => {
   return (
     <div className="min-h-screen bg-orange-50 text-gray-900">
       <Header></Header>
-      <main className="space-y-12 py-8">
-        <TaskBoard tasks={tasks}></TaskBoard>
-        <Column title="Formulär">
-          <div className="px-4">
-            <TaskForm onAddTask={addTask}></TaskForm>
-          </div>
-        </Column>
-      </main>
+      <Routes>
+        <Route path="/" element={<TaskBoardPage tasks={tasks}></TaskBoardPage>}>
+        </Route>
+        <Route path="/create" element={<CreateTaskPage onAddTask={addTask}></CreateTaskPage>}></Route>
+      </Routes>
       <Footer></Footer>
     </div>
   );
